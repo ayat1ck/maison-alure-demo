@@ -27,12 +27,14 @@ jobs:
 
       - run: npm install
 
-      - name: Build with correct GitHub Pages base
-        run: npm run build -- --base=/${{ github.event.repository.name }}/
+      - name: Build static Next.js export for GitHub Pages
+        env:
+          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+        run: npm run build
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: out
 
   deploy:
     needs: build
