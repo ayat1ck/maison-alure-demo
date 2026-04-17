@@ -26,7 +26,9 @@ export default function MembershipPage() {
                 <li key={feature}>• {feature}</li>
               ))}
             </ul>
-            <Button className="mt-5 w-full">Become a Member</Button>
+            <Link href={`/membership/checkout?plan=${plan.id}`} className="mt-5 block">
+              <Button className="w-full">Become a Member</Button>
+            </Link>
           </article>
         ))}
       </section>

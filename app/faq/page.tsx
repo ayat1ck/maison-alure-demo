@@ -14,7 +14,7 @@ export default function FaqPage() {
           <details key={item} className="rounded-2xl border border-gold/20 bg-[#14100d] p-4">
             <summary className="cursor-pointer text-cream">{item}</summary>
             <p className="mt-2 text-sm text-beige">
-              Placeholder answer for frontend stage. Final business rules will be bound during backend integration.
+              Full policy details and concierge support guidance are available upon member onboarding.
             </p>
           </details>
         ))}

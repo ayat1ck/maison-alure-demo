@@ -3,6 +3,7 @@ import { Inter, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
+import { AppProviders } from "@/components/providers/app-providers";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const cormorant = Cormorant_Garamond({
@@ -21,9 +22,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body className={`${inter.variable} ${cormorant.variable}`}>
-        <SiteHeader />
-        <main className="mx-auto min-h-[70vh] w-full max-w-7xl px-4 md:px-8">{children}</main>
-        <SiteFooter />
+        <AppProviders>
+          <SiteHeader />
+          <main className="mx-auto min-h-[70vh] w-full max-w-7xl px-4 md:px-8">{children}</main>
+          <SiteFooter />
+        </AppProviders>
       </body>
     </html>
   );
