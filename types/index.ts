@@ -31,3 +31,8 @@ export interface RentalOrder {
   deliveryDate: string;
   returnDate: string;
 }
+
+export interface FaqItem {
+  question: string;
+  answer: string;
+}

@@ -1,4 +1,4 @@
-import { ItemCard, MembershipPlan, RentalOrder } from "@/types";
+import { FaqItem, ItemCard, MembershipPlan, RentalOrder } from "@/types";
 
 export const brandAssets = {
   logo: "/images/maison-alure-logo.png",
@@ -122,11 +122,35 @@ export const rentalOrders: RentalOrder[] = [
   }
 ];
 
-export const faqItems = [
-  "How do rentals work?",
-  "How are deposits handled?",
-  "What does authentication include?",
-  "How do returns and cleaning work?",
-  "How does AI styling generate recommendations?",
-  "Can I use one-time rentals without membership?"
+export const faqItems: FaqItem[] = [
+  {
+    question: "How do rentals work?",
+    answer:
+      "Members choose pieces from the curated wardrobe, select rental dates, and receive insured delivery. Each rotation follows your plan limits; you can swap when your window ends or extend if the item is available. One-time rentals follow the same flow with a single checkout."
+  },
+  {
+    question: "How are deposits handled?",
+    answer:
+      "A refundable deposit is authorized (not charged as a purchase) for the value tier of the item. It is released after return and inspection, minus any damage or late fees per the rental agreement. Concierge can walk you through limits before you confirm."
+  },
+  {
+    question: "What does authentication include?",
+    answer:
+      "Pieces go through provenance checks, condition documentation, and internal verification before they are listed. High-value items may include additional documentation. Status is shown on each listing as Verified or In review so you know where it stands."
+  },
+  {
+    question: "How do returns and cleaning work?",
+    answer:
+      "Use the prepaid return packaging and scheduled pickup or drop-off. Items are inspected, professionally cleaned, and re-listed. Minor wear within normal use is expected; anything beyond that is assessed transparently with photos and member communication."
+  },
+  {
+    question: "How does AI styling generate recommendations?",
+    answer:
+      "The assistant uses your saved sizes, preferences, and past rotations to suggest outfits and complementary pieces from the catalog. It is advisory only—you always choose what to rent—and recommendations improve as you add favorites and feedback."
+  },
+  {
+    question: "Can I use one-time rentals without membership?",
+    answer:
+      "Yes. One-time rentals let you book individual pieces for a defined period without a monthly membership, subject to availability and the same trust and deposit rules. Membership remains the best fit if you rotate often or want priority access."
+  }
 ];
